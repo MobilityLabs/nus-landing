@@ -1,0 +1,18 @@
+/* all app scss styles here */
+
+@import "compass/css3";
+@import "compass/utilities";
+@import "video-bg";
+
+.jumbo{
+	font-size: 2em;
+}
+label{
+	color: $white;
+}
+// to be fixed
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
