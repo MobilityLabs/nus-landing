@@ -1,51 +1,40 @@
-.hidden {
-    display: none !important;
+body {
+  margin: 0;
+  background: #000; 
+}
+video { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('/videos/Nature-Sunset/snapshots/Nature-Sunset.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
 }
 
-.homepage-hero-module {
-    border-right: none;
-    border-left: none;
-    position: relative;
+@media screen and (max-width: 500px) { 
+  div{
+    width:70%;
+  } 
 }
-.no-video .video-container video,
-.touch .video-container video {
-    display: none;
+@media screen and (max-device-width: 800px) {
+  html { 
+    background: url(/videos/Nature-Sunset/snapshots/Nature-Sunset.jpg) #000 no-repeat center center fixed; 
+  }
+  #bgvid { 
+    display: none; 
+  }
 }
-.no-video .video-container .poster,
-.touch .video-container .poster {
-    display: block !important;
-}
-.video-container {
-    position: absolute;
-    z-index: -10;
-    bottom: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background: #000;
-}
-.video-container .poster img {
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-}
-.video-container .filter {
-    z-index: 100;
-    position: absolute;
-    background-image:
-    linear-gradient(
-      to right, 
-      rgba(82, 67, 114, 0.70), rgba(14, 94, 142, 0.70)
-    );
-    width: 100%;
-    height:100%;
-}
-.video-container video {
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-}
-.video-container video.fillWidth {
-    width: 100%;
+.filter{
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(82, 67, 114, 0.7), rgba(14, 94, 142, 0.7));
+
 }

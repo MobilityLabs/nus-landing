@@ -10,9 +10,9 @@
 label{
 	color: $white;
 }
-// to be fixed
-.absolute-center {
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+.form-box{
+    padding-top: 2em;
+    margin-top: 1em;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
 }
+

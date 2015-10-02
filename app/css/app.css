@@ -8324,59 +8324,46 @@ th.hide-for-touch {
   }
 }
 /* all app scss styles here */
-.hidden {
-  display: none !important;
-}
-
-.homepage-hero-module {
-  border-right: none;
-  border-left: none;
-  position: relative;
-}
-
-.no-video .video-container video,
-.touch .video-container video {
-  display: none;
-}
-
-.no-video .video-container .poster,
-.touch .video-container .poster {
-  display: block !important;
-}
-
-.video-container {
-  position: absolute;
-  z-index: -10;
-  bottom: 0%;
-  left: 0%;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+body {
+  margin: 0;
   background: #000;
 }
 
-.video-container .poster img {
-  width: 100%;
-  bottom: 0;
-  position: absolute;
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url("/videos/Nature-Sunset/snapshots/Nature-Sunset.jpg") no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
 }
 
-.video-container .filter {
-  z-index: 100;
-  position: absolute;
-  background-image: linear-gradient(to right, rgba(82, 67, 114, 0.7), rgba(14, 94, 142, 0.7));
+@media screen and (max-width: 500px) {
+  div {
+    width: 70%;
+  }
+}
+@media screen and (max-device-width: 800px) {
+  html {
+    background: url(/videos/Nature-Sunset/snapshots/Nature-Sunset.jpg) #000 no-repeat center center fixed;
+  }
+
+  #bgvid {
+    display: none;
+  }
+}
+.filter {
   width: 100%;
   height: 100%;
-}
-
-.video-container video {
+  z-index: -10;
   position: absolute;
-  z-index: 0;
-  bottom: 0;
-}
-
-.video-container video.fillWidth {
-  width: 100%;
+  background-image: linear-gradient(to right, rgba(82, 67, 114, 0.7), rgba(14, 94, 142, 0.7));
 }
 
 .jumbo {
@@ -8387,13 +8374,10 @@ label {
   color: #FFFFFF;
 }
 
-.absolute-center {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.form-box {
+  padding-top: 2em;
+  margin-top: 1em;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 /*# sourceMappingURL=app.css.map */
